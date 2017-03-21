@@ -4,7 +4,7 @@ from io import StringIO;
 def loadJsonFile(path):
     # Opening json file given by the path
     # Returning a python dictionnary
-    f = open(fileToOpen,'r');
+    f = open(path,'r');
     return json.load(f);
 
 def saveOptions(path, options):
