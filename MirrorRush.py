@@ -16,20 +16,30 @@ sys.path.append(os.path.realpath('.\classes'));
 #Importation des modules customs
 import util;
 import options;
+import menu;
 
 #Global variable
 options = options.options(".\data\options.json");
+actionToDo = 0;
 
 #init pygame
 pygame.init();
 
-
 #Creating the window
-widowResolution = pygame.display.Info();
-height = widowResolution.current_h;
-width = widowResolution.current_w;
-window  = pygame.display.set_mode((widowResolution.current_w,widowResolution.current_h), FULLSCREEN);
+window  = pygame.display.set_mode((options.getY(),options.getX()), options.getWindowType());
+count = 0;
 
-img = util.load_image('.\data\img\BG.jpg');
-window.blit(img,(0,0));
-pygame.display.flip();
+#TODO find a more elegant way to do this
+while 1:
+    i = i + 1;
+    if actionToDo == 0:
+        print("Launch Menu");
+        actionToDo = menu.launch(options);
+    elif actionToDo == 1:
+        print("Launch Game");
+    elif actionToDo == -1:
+        print("exit");
+        sys.exit();
+    else:
+        #In case of error
+        actionToDo = 0;
