@@ -11,20 +11,18 @@ import os;
 
 #On definit le path
 sys.path.append(os.path.realpath('.\module'));
-sys.path.append(os.path.realpath('.\class'));
+sys.path.append(os.path.realpath('.\classes'));
 
 #Importation des modules customs
 import util;
-import loading;
+import options;
 
 #Global variable
-#Maybe set a global dict for all global variable
-optionsPath = ".\data\options.json";
+options = options.options(".\data\options.json");
 
 #init pygame
 pygame.init();
-options = loading.loadJsonFile(optionsPath);
-#result = loading.saveOptions(optionsPath,options);
+
 
 #Creating the window
 widowResolution = pygame.display.Info();
