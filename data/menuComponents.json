@@ -1,0 +1,5 @@
+{"components":[
+    {"label":"Play","posX":0,"posY":0,"type":"game"},
+    {"label":"Settings","posX":0,"posY":0,"type":"options"},
+    {"label":"Exit","posX":0,"posY":0,"type":"exit"}
+]}
