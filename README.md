@@ -6,7 +6,7 @@
  - Pygame Library
  - Git ...
  
-#How to install : 
+# How to install : 
 
   Python :
   https://www.python.org/downloads/release/python-360/
