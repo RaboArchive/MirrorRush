@@ -18,4 +18,4 @@
   |-> python get-pip.py
   
   Pygame :
-  |-> pip install pigame
+  |-> pip install pygame
