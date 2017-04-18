@@ -12,7 +12,7 @@ class menu():
 
     #Class methods TODO
     def loadComponents(path):
-        components = util.loadJsonFile(self.getPath()):
+        components = util.loadJsonFile(self.getPath());
         print(components);
     #def reloadComponents():
     #def onClickAction()
