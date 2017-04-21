@@ -11,8 +11,8 @@ class menu():
         self.__loadComponents(path);
 
     #Class methods TODO
-    def __loadComponents(path):
-        components = util.loadJsonFile(self.getPath()):
+    def loadComponents(path):
+        components = util.loadJsonFile(self.getPath());
         print(components);
     #def reloadComponents():
     #def __onClickAction()
