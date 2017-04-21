@@ -31,7 +31,6 @@ count = 0;
 
 #TODO find a more elegant way to do this
 while 1:
-    i = i + 1;
     if actionToDo == 0:
         print("Launch Menu");
         actionToDo = menu.launch(options);
