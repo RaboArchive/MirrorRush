@@ -1,21 +1,19 @@
 # MirrorRush
 
-# Technos : 
+# Technos :
  - Python 3.6
  - PIP (Package manager of Python)
  - Pygame Library
  - Git ...
- 
-# How to install : 
+
+# How to install :
 
   Python :
   https://www.python.org/downloads/release/python-360/
   |-> Downloads -> 3.6 (Windows)
-  
-  PIP : 
-  |-> https://bootstrap.pypa.io/get-pip.py
-  |-> run this file with python 
-  |-> python get-pip.py
-  
+  |-> Add python to PATH
+  |-> Installation personnalisé
+  |-> Cochez pour installer PIP
+
   Pygame :
   |-> pip install pygame
