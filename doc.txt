@@ -1,0 +1,63 @@
+Documentation MirrorRush
+
+##########################
+Plan :
+Classes
+Organisation des fichiers
+Fonctions par classes
+##########################
+
+####Classes
+##########################
+Le diagramme de classe (V1) est accessible ici : https://trello-attachments.s3.amazonaws.com/58d5342badfd846bf5e0e803/1187x544/84302b80e2d0c4416f6e205d69bca897/30d3d14c07.png
+
+## Classe Game
+représente le programme principal qui interagit avec le joueur
+=> une seule instance possible
+
+## Classe Element
+classe abstraite
+représente la classe mère de tout les éléments affichables du jeu
+
+
+## Classe Timer
+représente le chronometre du jeu, sur lequel sera sans doute basé le score
+affichable
+
+## Classe Score
+represente les points gagnés par le joueur
+affichable
+
+## Classe Sprite
+représentent les objets "physiques" avec lesquels le joueur interagit
+leur caractéristique est d'être positionné dans le jeu (et pas seulement à l'écran)
+affichable, deplaceable, collisionnable
+
+## Classe Position
+comprend deux attributs x et y formant un couple de coordonée
+
+## Classe Vitesse
+comprend deux attributs x et y formant un couple de coordonée (pour un vecteur appliquable à la position)
+
+## Classe Twin
+represente le double personage jouable (double car affichage en deux partie, deux sprites, deux collision) avec un seul set de commande
+affichable, deplaceable, collisionnable, jouable
+
+## Classe Obstacle
+represente les modification de terrain auxquelles les twin seront confrontés
+affichable, deplaceable, collisionnable
+
+
+####Organisation des fichiers
+##############################
+3 répertoire principaux :
+#classes
+#data
+#module
+
+Comme son nom l'indique, le répertoire classe contient un fichier pour chaque classe existante décrite plus haut,
+plus les classes Options et Menu
+
+Le répertoire data //TODO
+
+Le répertoire module //TODO
