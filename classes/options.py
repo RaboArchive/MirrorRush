@@ -1,7 +1,7 @@
 import pygame;
 import util;
 
-class options():
+class Options():
     # constructeur
     def __init__(self, path):
         #initialisations et affectations d'attributs :
@@ -9,41 +9,41 @@ class options():
         self.windowType = pygame.RESIZABLE;
         self.x = 600;
         self.y = 800;
-        self.loadOptions();
+        self.load_options();
 
     #Load and save options
-    def loadOptions(self):
+    def load_options(self):
         options = util.loadJsonFile(self.path);
         #Add line per params
         self.x = options["x"];
         self.y = options["y"];
         self.windowType = options["wType"];
 
-    def saveOptions(self):
+    def save_options(self):
         options = {
             'x' : self.x,
             'y' : self.y,
             'wType' : self.windowType,
         };
-        util.saveOptions(self.path, options);
+        util.save_options(self.path, options);
 
     #Getters
-    def getResolution(self):
+    def get_resolution(self):
         return (self.x,self.y);
-    def getX(self):
+    def get_x(self):
         return self.x;
-    def getY(self):
+    def get_y(self):
         return self.y;
-    def getWindowType(self):
+    def get_window_type(self):
         return self.windowType;
 
     #Setters
-    def setResolution(self, new_xRes, new_yRes):
+    def set_resolution(self, new_xRes, new_yRes):
         self.x = new_xRes;
         self.y = new_yRes;
-    def setX(self, newX):
+    def set_x(self, newX):
         self.x = newX;
-    def setY(self, newY):
+    def set_y(self, newY):
         self.y = newY;
-    def setWindowType(self, newType):
+    def set_window_type(self, newType):
         self.windowType = newType;

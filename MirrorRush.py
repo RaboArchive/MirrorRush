@@ -19,21 +19,21 @@ import options;
 import menu;
 
 #Global variable
-options = options.options(".\data\options.json");
+options = options.Options(".\data\options.json");
 actionToDo = 0;
 
 #init pygame
 pygame.init();
 
 #Creating the window
-window  = pygame.display.set_mode((options.getY(),options.getX()), options.getWindowType());
+window  = pygame.display.set_mode((options.get_y(),options.get_x()), options.get_window_type());
 count = 0;
 
 #TODO find a more elegant way to do this
 while 1:
     if actionToDo == 0:
         print("Launch Menu");
-        actionToDo = menu.launch(options);
+        actionToDo = menu.Menu(options,".\data\menuComponents.json");
     elif actionToDo == 1:
         print("Launch Game");
     elif actionToDo == -1:

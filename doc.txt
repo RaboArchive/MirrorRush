@@ -58,6 +58,6 @@ affichable, deplaceable, collisionnable
 Comme son nom l'indique, le répertoire classe contient un fichier pour chaque classe existante décrite plus haut,
 plus les classes Options et Menu
 
-Le répertoire data //TODO
+Le répertoire data comprend un répertoire img qui contient lui même toutes les images necessaires au projet//TODO
 
 Le répertoire module //TODO

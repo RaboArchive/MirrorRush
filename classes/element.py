@@ -1,7 +1,7 @@
 import pygame;
 import util;
 
-class element():
+class Element():
     #Aim to be the basic element to display in the Game
     def __init__(self,path,label="component"):
         self.__path = path;
@@ -11,29 +11,29 @@ class element():
         self.__behavior = None;
 
     #Methods
-    def scaleImage(self, newWidth, newHeight):
+    def scale_image(self, newWidth, newHeight):
         pygame.transform.scale(self.img,(newWidth, newHeight));
-    def reloadImg(self):
+    def reload_img(self):
         self.__img = util.load_image(self.path);
         self.__dim = self._img.get_rect();
-    def performBehavior(self):
+    def perform_behavior(self):
         #don't know if it will work
         if(self.behavior != None):
             self.behavior(self);
 
     #Getters
-    def getImg(self):
+    def get_img(self):
         return self.__img;
-    def getDim(self):
+    def get_dim(self):
         return self.__img.get_rect();
-    def getLabel(self):
+    def get_label(self):
         return self.__label;
 
     #Setters
-    def setImg(self, img):
+    def set_img(self, img):
         self.__img = img;
         self.__dim = self._img.get_rect();
-    def setLabel(self, newLabel):
+    def set_label(self, newLabel):
         self.__label = newLabel;
-    def setBehavior(self, function):
+    def set_behavior(self, function):
         self.__behavior = function;
